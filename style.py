@@ -106,6 +106,7 @@ def check_opts(opts):
 
 def _get_files(img_dir):
     files = list_files(img_dir)
+    assert len(files) > 0, (img_dir +" is empty!, Please run setup.sh")
     return [os.path.join(img_dir,x) for x in files]
 
     
